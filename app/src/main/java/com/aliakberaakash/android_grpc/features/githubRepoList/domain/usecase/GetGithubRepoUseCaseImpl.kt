@@ -1,11 +1,11 @@
-package com.aliakberaakash.android_grpc.features.list.domain.usecase
+package com.aliakberaakash.android_grpc.features.githubRepoList.domain.usecase
 
-import com.aliakberaakash.android_grpc.features.list.data.repository.ListRepository
-import com.aliakberaakash.android_grpc.features.list.domain.entity.GithubRepoUiEntity
+import com.aliakberaakash.android_grpc.features.githubRepoList.data.repository.GithubRepoListRepository
+import com.aliakberaakash.android_grpc.features.githubRepoList.domain.entity.GithubRepoUiEntity
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-class GetGithubRepoUseCaseImpl(private val repo: ListRepository) : GetGithubRepoUseCase() {
+class GetGithubRepoUseCaseImpl(private val repo: GithubRepoListRepository) : GetGithubRepoUseCase() {
     override suspend fun getGithubRepo(): Flow<List<GithubRepoUiEntity>> {
         return repo.getGithubRepo().map { response ->
             if (response?.items == null)

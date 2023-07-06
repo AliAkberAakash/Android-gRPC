@@ -1,4 +1,4 @@
-package com.aliakberaakash.android_grpc.features.list.domain.entity
+package com.aliakberaakash.android_grpc.features.githubRepoList.domain.entity
 
 import com.aliakberaakash.android_grpc.common.data.entity.GithubRepoResponseEntity
 

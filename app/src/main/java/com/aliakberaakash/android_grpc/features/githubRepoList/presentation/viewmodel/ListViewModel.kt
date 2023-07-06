@@ -1,9 +1,9 @@
-package com.aliakberaakash.android_grpc.features.list.presentation.viewmodel
+package com.aliakberaakash.android_grpc.features.githubRepoList.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.aliakberaakash.android_grpc.features.list.domain.entity.GithubRepoUiEntity
-import com.aliakberaakash.android_grpc.features.list.domain.usecase.GetGithubRepoUseCase
+import com.aliakberaakash.android_grpc.features.githubRepoList.domain.entity.GithubRepoUiEntity
+import com.aliakberaakash.android_grpc.features.githubRepoList.domain.usecase.GetGithubRepoUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch

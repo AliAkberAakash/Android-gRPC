@@ -4,8 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.lifecycleScope
-import com.aliakberaakash.android_grpc.features.list.presentation.viewmodel.ListViewModel
-import kotlinx.coroutines.flow.collect
+import com.aliakberaakash.android_grpc.features.githubRepoList.presentation.viewmodel.ListViewModel
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

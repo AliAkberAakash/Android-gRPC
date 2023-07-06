@@ -1,4 +1,4 @@
-package com.aliakberaakash.android_grpc.features.list.presentation.ui
+package com.aliakberaakash.android_grpc.features.githubRepoList.presentation.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

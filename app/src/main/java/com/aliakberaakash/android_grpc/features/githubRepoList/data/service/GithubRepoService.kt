@@ -1,4 +1,4 @@
-package com.aliakberaakash.android_grpc.features.list.data.service
+package com.aliakberaakash.android_grpc.features.githubRepoList.data.service
 
 import com.aliakberaakash.android_grpc.common.data.entity.GithubRepoResponseEntity
 import retrofit2.http.GET
