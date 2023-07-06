@@ -5,7 +5,7 @@ import com.aliakberaakash.android_grpc.features.list.data.datasource.ListRemoteD
 import kotlinx.coroutines.flow.Flow
 
 class ListRepositoryImpl(val remote : ListRemoteDataSource) : ListRepository() {
-    override suspend fun getGithubRepo(): Flow<GithubRepoResponseEntity> {
+    override suspend fun getGithubRepo(): Flow<GithubRepoResponseEntity?> {
         // todo: if remote not available return from local
         return remote.getGithubRepo()
     }

@@ -4,5 +4,5 @@ import com.aliakberaakash.android_grpc.common.data.entity.GithubRepoResponseEnti
 import kotlinx.coroutines.flow.Flow
 
 abstract class ListRemoteDataSource {
-    abstract suspend fun getGithubRepo() : Flow<GithubRepoResponseEntity>
+    abstract suspend fun getGithubRepo() : Flow<GithubRepoResponseEntity?>
 }

@@ -4,9 +4,9 @@ import com.aliakberaakash.android_grpc.common.data.entity.GithubRepoResponseEnti
 
 class GithubRepoUiEntityMapper {
     companion object {
-        fun map(response : GithubRepoResponseEntity) : List<GithubRepoUiEntity> {
+        fun map(response : GithubRepoResponseEntity?) : List<GithubRepoUiEntity> {
             
-            if(response.items == null)
+            if(response?.items == null)
                 return listOf()
             
             return response.items.map { 

@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.map
 class GetGithubRepoUseCaseImpl(private val repo: ListRepository) : GetGithubRepoUseCase() {
     override suspend fun getGithubRepo(): Flow<List<GithubRepoUiEntity>> {
         return repo.getGithubRepo().map { response ->
-            if (response.items == null)
+            if (response?.items == null)
                 return@map listOf()
 
             response.items.map {

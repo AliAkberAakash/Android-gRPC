@@ -1,6 +1,7 @@
 package com.aliakberaakash.android_grpc.features.list.di
 
 
+import com.aliakberaakash.android_grpc.common.data.network.RetrofitBuilder
 import com.aliakberaakash.android_grpc.features.list.data.datasource.ListRemoteDataSource
 import com.aliakberaakash.android_grpc.features.list.data.datasource.ListRemoteDataSourceImpl
 import com.aliakberaakash.android_grpc.features.list.data.repository.ListRepository
@@ -13,7 +14,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val listModule = module {
-    single { GithubRepoService() }
+    single<GithubRepoService> { RetrofitBuilder.getRetrofit().create(GithubRepoService::class.java) }
     single<ListRemoteDataSource> { ListRemoteDataSourceImpl(get()) }
     single<ListRepository> { ListRepositoryImpl(get()) }
     single<GetGithubRepoUseCase> { GetGithubRepoUseCaseImpl(get()) }
