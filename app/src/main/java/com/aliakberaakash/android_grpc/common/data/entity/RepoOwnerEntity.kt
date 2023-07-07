@@ -1,12 +1,22 @@
 package com.aliakberaakash.android_grpc.common.data.entity
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
 data class RepoOwnerEntity (
+    @PrimaryKey
+    @ColumnInfo(name = "ownerId")
+    val id: Long,
     val login: String? = null,
-    val id: Long? = null,
+    @ColumnInfo(name = "ownerNodeId")
     val nodeID: String? = null,
     val avatarURL: String? = null,
     val gravatarID: String? = null,
+    @ColumnInfo(name = "ownerUrl")
     val url: String? = null,
+    @ColumnInfo(name = "ownerHtmlUrl")
     val htmlURL: String? = null,
     val followersURL: String? = null,
     val followingURL: String? = null,
@@ -15,6 +25,7 @@ data class RepoOwnerEntity (
     val subscriptionsURL: String? = null,
     val organizationsURL: String? = null,
     val reposURL: String? = null,
+    @ColumnInfo(name = "ownerEventsUrl")
     val eventsURL: String? = null,
     val receivedEventsURL: String? = null,
     val type: String? = null,

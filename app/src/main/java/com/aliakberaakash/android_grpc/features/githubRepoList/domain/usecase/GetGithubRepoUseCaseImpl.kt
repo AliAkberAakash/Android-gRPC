@@ -8,19 +8,13 @@ import kotlinx.coroutines.flow.map
 class GetGithubRepoUseCaseImpl(private val repo: GithubRepoListRepository) : GetGithubRepoUseCase() {
     override suspend fun getGithubRepo(): Flow<List<GithubRepoUiEntity>> {
         return repo.getGithubRepo().map { response ->
-            if (response?.items == null)
-                return@map listOf()
-
-            response.items.map {
+            response.map {
                 GithubRepoUiEntity(
                     id = it.id,
                     name = it.name,
                     owner = it.owner,
                 )
             }
-
-            // OR we could also map with the mapper:
-            // GithubRepoUiEntityMapper.map(response)
         }
     }
 }

@@ -8,7 +8,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
-class ListViewModel(private val useCase: GetGithubRepoUseCase) : ViewModel() {
+class ListViewModel(
+    private val useCase: GetGithubRepoUseCase
+    ) : ViewModel() {
 
     private val _result = MutableStateFlow<List<GithubRepoUiEntity>>(listOf())
     val result: StateFlow<List<GithubRepoUiEntity>> = _result

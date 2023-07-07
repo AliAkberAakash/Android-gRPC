@@ -1,11 +1,22 @@
 package com.aliakberaakash.android_grpc.common.data.entity
 
+import androidx.room.ColumnInfo
+import androidx.room.Embedded
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
+import retrofit2.http.Field
+
+@Entity(tableName = "githubrepoentity")
 data class GithubRepoEntity (
-    val id: Long? = null,
+    @PrimaryKey val id: Long,
     val nodeID: String? = null,
     val name: String? = null,
     val fullName: String? = null,
-    val private: Boolean? = null,
+    @ColumnInfo(name = "isPrivate")
+    @SerializedName("private")
+    val isPrivate: Boolean? = null,
+    @Embedded
     val owner: RepoOwnerEntity? = null,
     val htmlURL: String? = null,
     val description: String? = null,
@@ -58,22 +69,22 @@ data class GithubRepoEntity (
     val size: Long? = null,
     val stargazersCount: Long? = null,
     val watchersCount: Long? = null,
-    val language: Any? = null,
+    val language: String? = null,
     val hasIssues: Boolean? = null,
     val hasProjects: Boolean? = null,
     val hasDownloads: Boolean? = null,
     val hasWiki: Boolean? = null,
     val hasPages: Boolean? = null,
     val forksCount: Long? = null,
-    val mirrorURL: Any? = null,
+    val mirrorURL: String? = null,
     val archived: Boolean? = null,
     val disabled: Boolean? = null,
     val openIssuesCount: Long? = null,
-    val license: Any? = null,
+    //val license: String? = null,
     val allowForking: Boolean? = null,
     val isTemplate: Boolean? = null,
     val webCommitSignoffRequired: Boolean? = null,
-    val topics: List<String>? = null,
+    //val topics: List<String>? = null,
     val visibility: String? = null,
     val forks: Long? = null,
     val openIssues: Long? = null,

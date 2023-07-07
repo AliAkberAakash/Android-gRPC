@@ -1,4 +1,4 @@
-package com.aliakberaakash.android_grpc.features.githubRepoList.data.datasource
+package com.aliakberaakash.android_grpc.features.githubRepoList.data.datasource.remote
 
 import com.aliakberaakash.android_grpc.features.githubRepoList.data.service.GithubRepoService
 import kotlinx.coroutines.flow.flow
